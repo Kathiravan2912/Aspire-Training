@@ -1,0 +1,136 @@
+<html>
+    <head>
+        <title>Speech converter
+        </title>
+        <style>
+            body{
+                margin-top: 5%;
+                margin-bottom: 10%;
+                background-color: rgb(135, 135, 250);
+                font-family: sans-serif;
+            }
+            .topic{
+                 display: block;
+                text-align: center;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            .def{
+               font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+               text-align: justify;
+               margin-left: 5%;
+            }
+            h2{
+                text-align: center;
+                margin-right:90px;    
+                color: rgb(78, 78, 255);
+                padding-top: 20px;    
+                }
+            .text1,.text2{
+                border-radius: 8px;
+                padding-bottom: 20px;
+                background-color: aliceblue;
+                padding-left: 70px;
+                margin-left: 29%;
+                margin-right: 28%;
+            }
+            label{
+                margin-left: 5px;
+                font-size: larger;
+                font-style: bold;
+            }
+            textarea{
+                display: inline-block;
+                outline:none;
+                box-sizing: border-box;
+                vertical-align: top;
+                font-size: larger;
+                border: 2px solid #fff;
+                border-radius: 4px;
+                border-color: rgb(182, 182, 255);
+            }
+            textarea:focus{
+                outline:none;
+                border-color: blue;
+            }
+             input{
+                display: inline-block;
+                outline:none;
+                box-sizing: border-box;
+                vertical-align: top;
+                height: 40px;
+                width: 425px;
+                font-size: larger;
+                border: 2px solid #fff;
+                border-radius: 4px;
+                border-color: rgb(182, 182, 255);
+            }
+            input:focus{
+                outline:none;
+                border-color: blue;
+            } 
+            button{
+                padding: 9px 92px 9px 86px;
+                background-color: rgb(104, 104, 255);
+                color: #fff;
+                font-size: large;
+                border: none;
+                border-radius: 5px;
+                margin-top: 10px;
+                margin-left: 98px;
+                }
+            .hear{
+                background-color: #fff;
+                color: rgb(0, 0, 0);
+                border-radius: 5px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="hear">
+            <h1 class="topic">Text to Audio Converter</h1>
+        <h3 class="def"
+        >An interactive Text-to-Audio Converter using HTML, CSS, and JavaScript. Allow users to
+             input text, and with a click, convert it to speech. </h3>
+        </div>
+        <div class="text1">
+            <h2 >Text To Speech(using textArea)</h2>
+        <label for="input">
+            Enter your text:
+        </label>
+        <textarea rows="7" cols="50"  placeholder="Enter your text here..." id="input"></textarea>
+        <button id="playbtn">Speak</button>
+    </div>
+ 
+    <div class="text2">
+        <h2>Text To Speech(using input)</h2>
+    <label for="input1">
+        Enter your text:
+    </label>
+    <input  id="input2" placeholder="Enter your text">
+    <button id="playbtn2">Speak</button>
+    </div> 
+    <script>
+        const speakbtn = document.querySelector("#playbtn");
+        const text = document.querySelector("#input");
+
+        speakbtn.addEventListener("click", playSpeech);
+
+        function playSpeech(){
+            const speech = new SpeechSynthesisUtterance(text.value);
+            speechSynthesis.speak(speech);
+        }
+
+
+        const speakbtn1 = document.querySelector("#playbtn2");
+        const text1 = document.querySelector("#input2");
+
+        speakbtn1.addEventListener("click", playSpeech1);
+
+        function playSpeech1(){
+            const speech1 = new SpeechSynthesisUtterance(text1.value);
+            speechSynthesis.speak(speech1);
+       }
+    </script>
+    </body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: rgb(173, 88, 252);
+        }
+        h2{
+            display: flex;
+            color: blueviolet;
+            margin-bottom: 5%;
+            justify-content: center;
+        }
+        .form-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ccc;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .nn {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            border: none;
+            box-sizing: border-box;
+        }
+        .nn:focus{
+            border-width: 3px;
+            border-color: rgb(132, 2, 255);
+        }
+        .error-message {
+            color: red;
+            margin-top: 5px;
+        }
+        .btn{
+            background-color: blueviolet;
+            color: white;
+            padding: 11px;
+            border-radius: 6px;
+            margin-top: 5%;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>REGISTER FORM</h2>
+    <form id="myForm" onsubmit="return validateForm()">
+        <label for="username">Username:</label>
+        <input class="nn" type="text" id="username" name="username" required>
+        <span id="usernameError" class="error-message"></span>
+
+        <label for="number">Number:</label>
+        <input class="nn" type="text" id="number" name="number" pattern="\d{10}" required>
+        <span id="numberError" class="error-message"></span>
+
+        <label for="email">Email:</label>
+        <input class="nn" type="email" id="email" name="email" required>
+        <span id="emailError" class="error-message"></span>
+
+        <label for="password">Password:</label>
+        <input class="nn" type="password" id="password" name="password" required>
+        <span id="passwordError" class="error-message"></span>
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input class="nn" type="password" id="confirmPassword" name="confirmPassword" required>
+        <span id="confirmPasswordError" class="error-message"></span>
+
+        <input class="btn" type="submit" value="REGISTER">
+    </form>
+</div>
+
+<script>
+    function validateForm() {
+        var username = document.getElementById('username').value;
+        var number = document.getElementById('number').value;
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        var confirmPassword = document.getElementById('confirmPassword').value;
+
+        // Simple validation examples, you can enhance these based on your requirements
+        if (username === "") {
+            document.getElementById('usernameError').innerText = 'Username is required.';
+            return false;
+        }
+
+        if (!/^\d{10}$/.test(number)) {
+            document.getElementById('numberError').innerText = 'Number must be 10 digits.';
+            return false;
+        }
+
+        if (!/^\S+@\S+\.\S+$/.test(email)) {
+            document.getElementById('emailError').innerText = 'Invalid email address.';
+            return false;
+        }
+
+        if (password.length < 6) {
+            document.getElementById('passwordError').innerText = 'Password must be at least 6 characters.';
+            return false;
+        }
+
+        if (password !== confirmPassword) {
+            document.getElementById('confirmPasswordError').innerText = 'Passwords do not match.';
+            return false;
+        }
+
+        document.getElementById('usernameError').innerText = '';
+        document.getElementById('numberError').innerText = '';
+        document.getElementById('emailError').innerText = '';
+        document.getElementById('passwordError').innerText = '';
+        document.getElementById('confirmPasswordError').innerText = '';
+        return true;
+    }
+</script>
+
+</body>
+</html>
