@@ -1,0 +1,10 @@
+div{
+    height: 400px;
+    width: 400px;
+    background-color: black;transition: 4s;
+}
+.withmax{
+    height: 400px;
+    width: 900px;
+    background-color: rgb(233, 16, 16);
+}

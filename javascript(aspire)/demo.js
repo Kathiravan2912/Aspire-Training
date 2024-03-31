@@ -7,9 +7,9 @@ var qoute = "Have a good day peeps...!";
 //     console.log("no qoutes!");
 // }
  
-var fruits = [apple, orange, kiwi, mango];
+var fruits = ["orange", "kiwi", "mango"];
 fruits.map((friut) => {
-    console.log(fruit);
+    console.log(friut);
 })
 
 
