@@ -1,0 +1,140 @@
+use mydata;
+CREATE TABLE EmployeeDetails (
+    employeeId INT PRIMARY KEY,
+    name VARCHAR(100),
+    department VARCHAR(100),
+    Designation VARCHAR(100),
+    Address VARCHAR(100),
+    Mobile VARCHAR(10),
+    EmailID VARCHAR(100),
+    gender CHAR(6),
+    salary DECIMAL(10, 1)
+);
+INSERT INTO EmployeeDetails (employeeId, name, department, Designation, Address, Mobile, EmailID, gender, salary)
+VALUES 
+(1, 'kathir', 'CSE', 'Assistent professor', '21,East Main Street, villupuram', '1234567890', 'ak@gmail.com', 'Male', 50000.00),
+(2, 'bharath', 'EEE', 'Faculty advisor', '46, SSR Street, cuddalore', '9876543210', 'bharath@gmail.com', 'Male', 45000.00),
+(3, 'chandru', 'ECE', 'HOD', '7, MMR Street, llageton', 'chennai', 'chd@gmail.com', 'Male', 55000.00);
+
+SELECT* FROM EmployeeDetails;
+CREATE TABLE DepartmentDetails (
+    departmentID INT PRIMARY KEY,
+    departmentName VARCHAR(100),
+    employeeId INT,
+    employeeName VARCHAR(100),
+    FOREIGN KEY (employeeId) REFERENCES EmployeeDetails(employeeId)
+);
+
+INSERT INTO DepartmentDetails (departmentName, employeeId, employeeName)
+VALUES 
+('CSE', 1, 'kathir'),
+('EEE', 2, 'bharath'),
+('ECE', 3, 'chandru');
+ 
+SELECT * FROM DepartmentDetails;
+
+Table 2:
+
+
+CREATE TABLE EmployeeDetails (
+    employeeId INT PRIMARY KEY,
+    name VARCHAR(100),
+    department VARCHAR(100),
+    Designation VARCHAR(100),
+    Address VARCHAR(100),
+    Mobile VARCHAR(10),
+    EmailID VARCHAR(100),
+    gender CHAR(6),
+    salary DECIMAL(10, 1)
+);
+INSERT INTO EmployeeDetails (employeeId, name, department, Designation, Address, Mobile, EmailID, gender, salary)
+VALUES 
+(1, 'kathir', 'CSE', 'Assistent professor', '21,East Main Street, villupuram', 9123456789, 'ak@gmail.com', 'Male', 50000.00),
+(2, 'bharath', 'EEE', 'Faculty advisor', '46, SSR Street, cuddalore', 9876543210, 'bharath@gmail.com', 'Male', 45000.00),
+(3, 'chandru', 'ECE', 'HOD', '7 MMR Street ,chennai',9364633543, 'chd@gmail.com', 'Male', 55000.00),
+(4, 'mani', 'AI', 'proffesor',' 76, AJR Street, chennai',8763846352,  'mani@gmail.com', 'Male', 50000.00);
+
+SELECT* FROM EmployeeDetails;
+
+CREATE TABLE DepartmentDetails (
+    departmentID INT PRIMARY KEY,
+    departmentName VARCHAR(100),
+    employeeId INT,
+    employeeName VARCHAR(100),
+    FOREIGN KEY (employeeId) REFERENCES EmployeeDetails(employeeId)
+);
+
+INSERT INTO DepartmentDetails (departmentID, departmentName, employeeId, employeeName)
+VALUES 
+(1, 'CSE', 1, 'kathir'),
+(2, 'EEE', 2, 'bharath'),
+(3, 'ECE', 3, 'chandru'),
+(4, 'AI', 4, 'mani');
+ 
+SELECT * FROM DepartmentDetails;
+
+DDL Commands:
+create table student(
+    name varchar(100),
+    StudentId int,
+    department varchar(20),
+    Marks int
+);
+
+alter table student add column subject varchar(100);       //insert a column
+alter table student change department Dept varchar(100);    //change column name
+alter table student change marks marks varchar(100);       //change data type
+
+drop table student;
+
+
+DML Commands:
+create table student(
+    name varchar(100),
+    StudentId int,
+    department varchar(20),
+    Marks int
+);
+
+alter table student add column subject varchar(100);
+-- alter table student change department Dept varchar(100);
+-- alter table student change marks marks varchar(100);
+
+-- drop table student;
+insert into student values('kathir',22,'cse','23','maths');
+insert into student values('bharat',21,'Ece','22','DAA');
+
+-- update student set marks=34;
+update student set department="Civil"  where department="Ece";
+update student set marks=43  where marks=23;
+delete from student where StudentId=21;
+select * from student;
+
+DQLCOmmand:
+select * from student;
+
+
+TCL commands:
+Auto commit is enabled.
+works only on DML commands.
+set autocommit=1, 1 is enabled,  0 is deceble;
+
+delete from student where StudentId=21;
+commit;
+delete from student where StudentId=21;
+rollback;
+
+
+DCL COmmands:
+GRANT allows access is previlege
+GRANT ALL ON student;
+GRANT <previlege list>
+branted people can modify data
+
+Revoke to control granted permissions
+REVOKE <previlege list> ON <relation name or view name>
+from <username
+REVOKE update ON student from abc;
+
+
+
