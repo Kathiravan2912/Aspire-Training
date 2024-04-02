@@ -1,0 +1,154 @@
+<html>
+
+<head>
+    <title>Registration</title>
+    <style>
+        body {
+            background-color: rgb(117, 117, 233);
+        }
+
+        table,
+        th,
+        td {
+            background-color: white;
+            border-radius: 15px;
+            margin-left: 27%;
+            padding: 10px;
+            font-size: large;
+        }
+
+        input {
+            border: 0.2px solid black;
+            outline: none;
+            border-radius: 3px;
+        }
+
+        input:focus {
+            border: 2px solid rgb(0, 17, 255);
+        }
+
+        button {
+            padding: 10px 25px 10px 25px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .reset {
+            background-color: rgb(255, 24, 24);
+            color: white;
+        }
+
+        .submit {
+            background-color: rgb(35, 255, 35);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">REGISTER HERE</h1>
+    <form action="first.html">
+    <table width="50%">
+        <tr>
+            <td>Name:</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>Mobile:</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>E-Mail:</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type="password"></td>
+        </tr>
+        <tr>
+            <td>Confirm password:</td>
+            <td><input type="password"></td>
+        </tr>
+        <tr>
+            <td>Gender:</td>
+            <td><input type="radio" value="Male" name="gender">Male
+                <input type="radio" value="Female" name="gender">Female
+                <input type="radio" value="Others" name="gender">Others
+            </td>
+        </tr>
+        <tr>
+            <td>Languages Known:</td>
+            <td><input type="checkbox">English
+                <input type="checkbox">Tamil
+                <input type="checkbox">Hindi
+            </td>
+        </tr>
+        <tr>
+            <td>Country:</td>
+            <td>
+                <select>
+                    <option>INDIA</option>
+                    <option>PAKISTAN</option>
+                    <option>USA</option>
+                    <option>SRILANKA</option>
+                    <option>NEPAL</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>State:</td>
+            <td>
+                <select>
+                    <option>DELHI</option>
+                    <option>TAMILNADU</option>
+                    <option>KERALA</option>
+                    <option>ANDHRAPRADESH</option>
+                    <option>KARNATAKA</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>District:</td>
+            <td>
+                <select>
+                    <option>CHENNAI</option>
+                    <option>VILLUPURAM</option>
+                    <option>TRICHY</option>
+                    <option>KARUR</option>
+                    <option>Nepal</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Skills level in java:
+            </td>
+            <td>
+                <input type="range">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Upload your CV:
+            </td>
+            <td>
+                <input type="file">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="reset" style="margin-left: 80%;" class="reset">
+                    RESET
+                </button>
+            </td>
+            <td><button   style="margin-left: 30%;"  class="submit">
+                    SUBMIT
+                </button>
+            </td>
+        </tr>
+    </table>
+
+</form>
+</body>
+
+</html>
