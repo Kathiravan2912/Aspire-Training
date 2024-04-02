@@ -134,7 +134,7 @@ branted people can modify data
 Revoke to control granted permissions
 REVOKE <previlege list> ON <relation name or view name>
 from <username
-REVOKE update ON student from abc;
+REVOKE update ON student from person1;
 
 
 
