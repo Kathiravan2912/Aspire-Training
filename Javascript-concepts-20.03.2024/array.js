@@ -1,3 +1,10 @@
+// Topic: Array methods in javascript.
+// Author: Kathiravan A
+// Created Date: 25.03.2024
+// Last modified date: 03.04.2024
+// Reviewed by: 
+// Reviewed date:
+
 var array1 = [1,2,3,4,5,6];
 console.log(array1);
 console.log(array1.length);
@@ -22,5 +29,5 @@ var A4 = ["a","b","c","d","e","f"];
 console.log(A4.flat());
 console.log(A4[2]);
 
-console.log(A4.copyWithin(1,0,3))
-console.log(A4[0])
+console.log(A4.copyWithin(1,0,3));
+console.log(A4[0]);
