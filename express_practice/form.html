@@ -4,19 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration form</title>
+    <style>
+        body{
+            font-family: sans-serif;
+            font-size: large;
+        }
+        input{
+            width: 400px;
+            height: 30px;
+            border-radius: 5px;
+            border: none;
+        }
+        button{
+            border: none;
+            color: white;
+            background-color: gray;
+            padding: 15px 30px;
+            border-radius: 8px;
+            margin-left: 27%;
+        }
+        button:hover{
+            cursor: pointer;
+            transform: scale(1.05);
+            transition-duration: 0.2s;
+        }
+        .container{
+            margin-left: 28%;
+            margin-right: 28%;
+            background-color: rgb(188, 188, 188);
+            padding: 30px;
+        }
+        form{
+            margin-left: 19.5%;
+        }
+    </style>
 </head>
+<body>
+    <div class="container">
 <form action="http://localhost:2000/register">
-    <label>Username:</label>
-    <input type="text" name="name"><br>
-    <label>E-Mail:</label>
-    <input type="text" name="email"><br>
-    <label>Password:</label>
-    <input type="text" name="password"><br>
-    <label>Number:</label>
-    <input type="text" name="number"><br>
-    <label>City:</label>
-    <input type="text" name="city"><bR>
-    <input type="submit" value="proceed">
+    <label>Username:</label><br>
+    <input type="text" name="name"><br><br>
+    <label>E-Mail:</label><br>
+    <input type="text" name="email"><br><br>
+    <label>Password:</label><br>
+    <input type="text" name="password"><br><br>
+    <label>Number:</label><br>
+    <input type="text" name="number"><br><br>
+    <label>City:</label><br>
+    <input type="text" name="city"><bR><br><br>
+    <button type="submit" value="proceed">SUBMIT</button> 
 </form>
+</div>
 </body>
 </html>
