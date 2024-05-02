@@ -17,14 +17,24 @@ mongoose.connect('mongodb://127.0.0.1:27017/kathir')
 .catch((err)=> console.log("404 Error not found"))
 
 // console.log(__filename);
-app.get('/', function (req , res){
+
+
+app.post('/sign_in', function (req, res){
+    console.log("req = " , req.body);
+    let username = req.body.userName;
+    let password = req.body.password;
+
+    
+
+    console.log("username = " , username);
 
     res.send({
-        status : 1,
-        message : "Welcome to home page"
-    })
-
-})
+        status: 1,
+        message: "Welcome to home page",
+        username: username,
+        password: password
+    });
+});
 
 app.listen(port , ()=>{
     console.log(`example port ${port}`);
