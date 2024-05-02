@@ -1,0 +1,126 @@
+<!-- Topic: Form validation using javascript.
+Author: Kathiravan A
+Created Date: 18.04.2024
+Last modified date: 26.04.2024
+Reviewed by: 
+Reviewed Date:
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Validation</title>
+<style>
+    body{
+        background-color: rgb(0, 180, 0);
+    }
+    .input-container {
+        margin-bottom: 20px;
+    }
+    .container{
+        margin-top: 5%;
+        margin-left: 33%;
+        margin-right: 33%;
+        background-color: white;
+        box-shadow: 6px 5px 5px 6px rgb(21, 70, 8);
+        padding: 30px 70px 30px 30px;
+        border-radius: 6px;
+    }
+    input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    button{
+        text-align: center;
+        border: none;
+        background-color: rgb(0, 180, 0);
+        padding: 5px 25px 5px 25px;
+        border-radius: 4px;
+        color: white;
+        font-size: large;
+    }
+    button:hover{
+        transform: scale(1.05);
+    }
+    .reset{
+        background-color: red;
+    }   
+    .error-message {
+        color: red;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+    .buttons{
+        margin-left: 25%;
+        padding: 5px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+<div class="input-container">
+    USERNAME:<br>
+    <input type="text" id="username" placeholder="Username">
+    <div class="error-message" id="username-error"></div>
+</div>
+
+<div class="input-container">
+    E-MAIL:<br>
+    <input type="email" id="email" placeholder="Email">
+    <div class="error-message" id="email-error"></div>
+</div>
+
+<div class="input-container">
+    PASSWORD:<br>
+    <input type="password" id="password" placeholder="Password">
+    <div class="error-message" id="password-error"></div>
+</div>
+<div class="buttons">
+<button class="reset" onclick="resetForm()()">RESET</button>
+<button class="submit" onclick="validateForm()">SUBMIT</button>
+</div>
+</div>
+
+<script>
+    function validateForm() {
+        var username = document.getElementById('username').value.trim();
+        var email = document.getElementById('email').value.trim();
+        var password = document.getElementById('password').value.trim();
+        var usernameError = document.getElementById('username-error');
+        var emailError = document.getElementById('email-error');
+        var passwordError = document.getElementById('password-error');
+
+        if (username === '') {
+            usernameError.textContent = 'Username is required';
+            isValid = false;
+        }
+
+        if (!/^\S+@\S+\.\S+$/.test(email)) {
+            emailError.textContent = 'Invalid email format';
+            isValid = false;
+        }
+
+        if (password.length < 8) {
+            passwordError.textContent = 'Password must be at least 6 characters long';
+            isValid = false;
+        }
+
+        if (isValid) {
+            console.log('Form submitted');
+        }
+    }
+    function resetForm() {
+        document.getElementById('username').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('password').value = '';
+        document.getElementById('username-error').textContent = '';
+        document.getElementById('email-error').textContent = '';
+        document.getElementById('password-error').textContent = '';
+    }
+</script>
+
+</body>
+</html>
