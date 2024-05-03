@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Grid and Table</title>
+  <style>
+    /* CSS styles */
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    
+    .event-image {
+      width: 100%;
+      height: auto;
+    }
+    
+    .table-events {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    .table-events th, .table-events td {
+      padding: 8px;
+      text-align: left;
+    }
+    
+    .table th {
+      background-color: #f2f2f2;
+    }
+    
+    .table tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <!-- Image Grid -->
+  <div class="image-grid">
+    <img src="pic1.jpeg" class="event-image" alt="Image 1">
+    <img src="pic2.jpeg" class="event-image" alt="Image 2">
+    <img src="pic3.jpeg" class="event-image" alt="Image 3">
+    <img src="pic2.jpeg" class="event-image" alt="Image 4">
+    <img src="pic5.jpeg" class="event-image" alt="Image 5">
+    <img src="pic10.jpeg" class="event-image" alt="Image 6">
+    <img src="pic5.jpeg" class="event-image" alt="Image 7">
+    <img src="pic8.jpeg" class="event-image" alt="Image 8">
+    <img src="pic9.jpeg" class="event-image" alt="Image 9">
+    <img src="pic10.jpeg" class="event-image" alt="Image 10s">
+  </div>
+  <table class="table-events">
+    <thead>
+      <tr>
+        <th>S. No.</th>
+        <th>Event</th>
+        <th>Year</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Event 1</td>
+        <td>2022</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Event 2</td>
+        <td>2023</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Event 2</td>
+        <td>2023</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Event 2</td>
+        <td>2023</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Event 2</td>
+        <td>2023</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>Event 2</td>
+        <td>2023</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>Event 2</td>
+        <td>2023</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>Event 2</td>
+        <td>2023</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>Event 2</td>
+        <td>2023</td>
+      </tr> <tr>
+        <td>10</td>
+        <td>Event 2</td>
+        <td>2023</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

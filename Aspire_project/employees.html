@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank of Merits - Employees</title>
+    <style>
+      /* Your CSS styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+      }
+
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        min-height: 100vh;
+      }
+
+      main {
+        width: 80%;
+        padding: 20px;
+        background-color: #8b8b8b;
+        /* background-image: url("bg.jpg"); */
+        background-size: cover;
+      }
+
+      aside {
+        width: 14%;
+        background-color: #f4f4f4;
+        padding: 20px;
+        position: sticky;
+        top: 60px; /* Height of the header */
+        height: calc(100vh - 60px); /* Height of the viewport minus header */
+        overflow-y: auto;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      ul li {
+        margin-bottom: 10px;
+      }
+
+      ul li a {
+        text-decoration: none;
+        color: #ffffff;
+        padding-bottom: 10px;
+      }
+      .option {
+        padding: 20px 30px;
+        background-color: gray;
+        border-radius: 6px;
+      }
+      .option:hover {
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+        transition-duration: 0.3s;
+      }
+      .content {
+        display: none;
+      }
+
+      .content.active {
+        display: block;
+      }
+
+      .Form-to-add {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5); /* Black with transparency */
+      }
+
+      .Form-to-add-content {
+        background-color: #fefefe;
+        margin: 10% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 500px;
+        border-radius: 5px;
+      }
+      .add-form {
+        border: none;
+        background-color: rgb(14, 152, 14);
+        color: white;
+        padding: 18px;
+        border-radius: 5px;
+      }
+      .add-form:hover {
+        cursor: pointer;
+        background-color: rgb(0, 128, 0);
+        transition-duration: 0.2s;
+      }
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        color: #000000;
+        font-size: large;
+      }
+      th,
+      td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      tr{
+        height: 70px;
+      }
+      .employee-add-form {
+        padding: 10px;
+      }
+      input {
+        height: 25px;
+        width: 220px;
+      }
+      .add-button {
+        margin-left: 48%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Bank of Merits - Employees</h1>
+    </header>
+
+    <div class="container">
+      <aside>
+        <ul>
+          <li class="option">
+            <a href="#" onclick="showContent('option1')">Higher Employees</a>
+          </li>
+          <li class="option">
+            <a href="#" onclick="showContent('option2')">Normal Employees</a>
+          </li>
+          <li class="option">
+            <a href="#" onclick="showContent('option3')">Non-tech Employees</a>
+          </li>
+          <li class="option">
+            <a href="#" onclick="homepage()">Back to Home</a>
+          </li>
+        </ul>
+      </aside>
+      <main>
+        <div id="option1" class="content active">
+          <h2>Higher Employees</h2>
+          <button class="add-form" onclick="openForm()">Add Employee</button><br><br>
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Position</th>
+                <th>Salary</th>
+                <th>Number</th>
+                <th>Image</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Kathiravan A</td>
+                <td>123 Main St, City</td>
+                <td>Manager</td>
+                <td>Rs.60,000</td>
+                <td>9876543210</td>
+                <td>image1</td>
+              </tr>
+              <tr>
+                <td>Kathiravan A</td>
+                <td>123 Main St, City</td>
+                <td>Manager</td>
+                <td>Rs.60,000</td>
+                <td>9876543210</td>
+                <td>image1</td>
+              </tr>
+              <tr>
+                <td>Kathiravan A</td>
+                <td>123 Main St, City</td>
+                <td>Manager</td>
+                <td>Rs.60,000</td>
+                <td>9876543210</td>
+                <td>image1</td>
+              </tr>
+              <tr>
+                <td>Kathiravan A</td>
+                <td>123 Main St, City</td>
+                <td>Manager</td>
+                <td>Rs.60,000</td>
+                <td>9876543210</td>
+                <td>image1</td>
+              </tr>
+              <tr>
+                <td>Kathiravan A</td>
+                <td>123 Main St, City</td>
+                <td>Manager</td>
+                <td>Rs.60,000</td>
+                <td>9876543210</td>
+                <td>image1</td>
+              </tr>
+              <tr>
+                <td>Kathiravan A</td>
+                <td>123 Main St, City</td>
+                <td>Manager</td>
+                <td>Rs.60,000</td>
+                <td>9876543210</td>
+                <td>image1</td>
+              </tr>
+              <tr>
+                <td>Kathiravan A</td>
+                <td>123 Main St, City</td>
+                <td>Manager</td>
+                <td>Rs.60,000</td>
+                <td>9876543210</td>
+                <td>image1</td>
+              </tr>
+              <tr>
+                <td>Kathiravan A</td>
+                <td>123 Main St, City</td>
+                <td>Manager</td>
+                <td>Rs.60,000</td>
+                <td>9876543210</td>
+                <td>image1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="option2" class="content">
+          <h2>Normal Employees</h2>
+          <button class="add-form" onclick="openForm()">Add Employee</button><br><br>
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Position</th>
+                <th>Salary</th>
+                <th>Number</th>
+                <th>Image</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Kathiravan A</td>
+                <td>123 Main St, City</td>
+                <td>Manager</td>
+                <td>Rs.60,000</td>
+                <td>9876543210</td>
+                <td>image1</td>
+              </tr>
+              <tr>
+                <td>Kathiravan A</td>
+                <td>123 Main St, City</td>
+                <td>Manager</td>
+                <td>Rs.60,000</td>
+                <td>9876543210</td>
+                <td>image1</td>
+              </tr>
+              <tr>
+                <td>Kathiravan A</td>
+                <td>123 Main St, City</td>
+                <td>Manager</td>
+                <td>Rs.60,000</td>
+                <td>9876543210</td>
+                <td>image1</td>
+              </tr>
+              <tr>
+                <td>Kathiravan A</td>
+                <td>123 Main St, City</td>
+                <td>Manager</td>
+                <td>Rs.60,000</td>
+                <td>9876543210</td>
+                <td>image1</td>
+              </tr>
+              <tr>
+                <td>Kathiravan A</td>
+                <td>123 Main St, City</td>
+                <td>Manager</td>
+                <td>Rs.60,000</td>
+                <td>9876543210</td>
+                <td>image1</td>
+              </tr>
+              <tr>
+                <td>Kathiravan A</td>
+                <td>123 Main St, City</td>
+                <td>Manager</td>
+                <td>Rs.60,000</td>
+                <td>9876543210</td>
+                <td>image1</td>
+              </tr>
+              <tr>
+                <td>Kathiravan A</td>
+                <td>123 Main St, City</td>
+                <td>Manager</td>
+                <td>Rs.60,000</td>
+                <td>9876543210</td>
+                <td>image1</td>
+              </tr>
+              <tr>
+                <td>Kathiravan A</td>
+                <td>123 Main St, City</td>
+                <td>Manager</td>
+                <td>Rs.60,000</td>
+                <td>9876543210</td>
+                <td>image1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="option3" class="content">
+          <h2>Non-tech Employees</h2>
+          <button class="add-form" onclick="openForm()">Add Employee</button><br><br>
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Position</th>
+                <th>Salary</th>
+                <th>Number</th>
+                <th>Image</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Kathiravan A</td>
+                <td>123 Main St, City</td>
+                <td>Manager</td>
+                <td>Rs.60,000</td>
+                <td>9876543210</td>
+                <td>image1</td>
+              </tr>
+              <tr>
+                <td>Kathiravan A</td>
+                <td>123 Main St, City</td>
+                <td>Manager</td>
+                <td>Rs.60,000</td>
+                <td>9876543210</td>
+                <td>image1</td>
+              </tr>
+              <tr>
+                <td>Kathiravan A</td>
+                <td>123 Main St, City</td>
+                <td>Manager</td>
+                <td>Rs.60,000</td>
+                <td>9876543210</td>
+                <td>image1</td>
+              </tr>
+              <tr>
+                <td>Kathiravan A</td>
+                <td>123 Main St, City</td>
+                <td>Manager</td>
+                <td>Rs.60,000</td>
+                <td>9876543210</td>
+                <td>image1</td>
+              </tr>
+              <tr>
+                <td>Kathiravan A</td>
+                <td>123 Main St, City</td>
+                <td>Manager</td>
+                <td>Rs.60,000</td>
+                <td>9876543210</td>
+                <td>image1</td>
+              </tr>
+              <tr>
+                <td>Kathiravan A</td>
+                <td>123 Main St, City</td>
+                <td>Manager</td>
+                <td>Rs.60,000</td>
+                <td>9876543210</td>
+                <td>image1</td>
+              </tr>
+              <tr>
+                <td>Kathiravan A</td>
+                <td>123 Main St, City</td>
+                <td>Manager</td>
+                <td>Rs.60,000</td>
+                <td>9876543210</td>
+                <td>image1</td>
+              </tr>
+              <tr>
+                <td>Kathiravan A</td>
+                <td>123 Main St, City</td>
+                <td>Manager</td>
+                <td>Rs.60,000</td>
+                <td>9876543210</td>
+                <td>image1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+
+    <div id="myForm-to-add" class="Form-to-add">
+      <div class="Form-to-add-content">
+        <span class="close" onclick="closeForm()">&times;</span>
+        <h2>Add Employee</h2>
+        <form>
+          <table class="employee-add-form">
+            <tr>
+              <td>
+                <label for="fname">First Name:</label><br />
+                <input type="text" id="fname" name="fname" /><br /><br />
+              </td>
+              <td>
+                <label for="lname">Last Name:</label><br />
+                <input type="text" id="lname" name="lname" /><br /><br />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="fname">Address:</label><br />
+                <input type="text" id="fname" name="fname" /><br /><br />
+              </td>
+              <td>
+                <label for="lname">Place:</label><br />
+                <input type="text" id="lname" name="lname" /><br /><br />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="fname">District:</label><br />
+                <input type="text" id="fname" name="fname" /><br /><br />
+              </td>
+              <td>
+                <label for="lname">State:</label><br />
+                <input type="text" id="lname" name="lname" /><br /><br />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="fname">Position:</label><br />
+                <input type="text" id="fname" name="fname" /><br /><br />
+              </td>
+              <td>
+                <label for="lname">Salary:</label><br />
+                <input type="text" id="lname" name="lname" /><br /><br />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="fname">Number</label><br />
+                <input type="text" id="fname" name="fname" /><br /><br />
+              </td>
+              <td>
+                <label for="lname">Image</label><br />
+                <input type="text" id="lname" name="lname" /><br /><br />
+              </td>
+            </tr>
+          </table>
+          <button class="add-button">ADD</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function showContent(option) {
+        var contents = document.querySelectorAll(".content");
+        contents.forEach(function (content) {
+          content.classList.remove("active");
+        });
+
+        var selectedContent = document.getElementById(option);
+        if (selectedContent) {
+          selectedContent.classList.add("active");
+        }
+      }
+
+      function openForm() {
+        document.getElementById("myForm-to-add").style.display = "block";
+      }
+      function closeForm() {
+        document.getElementById("myForm-to-add").style.display = "none";
+      }
+      function homepage() {
+        window.location.href = "home.html";
+      }
+    </script>
+  </body>
+</html>

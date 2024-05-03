@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank of merits Homepage</title>
+  <style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+img{
+    height: 30px;
+    width: 30px;
+    padding: 5px 2px 0px 2px;
+}
+ul,button{
+    display:inline;
+    padding: 10px;
+}
+.page-options{
+    margin-left: 1%;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    padding: 15px;
+}
+.page-options:hover{
+    background-color: black;
+    color: white;
+    transition-duration: 5ms;
+}
+.logout{
+    margin-left: 65%;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    padding: 15px;
+}
+.logout:hover{
+    background-color: black;
+    color: white;
+    transition-duration: 5ms;
+}
+.options-list{
+    padding-top: 5px;
+}
+.statistic {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 2%;
+}
+
+.statistic h2 {
+  margin-top: 0;
+}
+
+#bank-data {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+#position {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 5px;
+}
+footer{
+    margin-bottom: 0;
+    border-radius:6px ;
+    background-color: gray;
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bank of Merits</h1>
+  </header>
+  <main>
+    <section id="options-list">
+        <ul>
+            <button class="page-options" id="employees" onclick="employeePage()">Employees</button>
+            <button class="page-options" id="customers" onclick="customerPage()">Customers</button>
+            <button class="page-options" id="about" onclick="aboutPage()">About Organisation</button>
+            <button class="logout" id="logout" onclick="loginPage()">Logout</button>
+        </ul>
+    </section>
+    <hr>
+    <section id="statistics">
+      <div class="statistic">
+        <h2><img src="customer.png">  Total Customers</h2>
+        <p>100,000</p>
+      </div>
+      <div class="statistic">
+        <h2> <img src="employees.png">  Total Employees</h2>
+        <p>500</p>
+      </div>
+    </section>
+    <section id="bank-data">
+      <h2> <img src="bank.png">  Bank Data</h2>
+      <p>Total Assets: RS.1,000,000,000</p>
+      <p>Net Income: RS.100,000,000</p>
+    </section>
+    <section id="position">
+      <h2> <img src="rank.png">  Position</h2>
+      <p>Ranked #1 in customer satisfaction</p>
+    </section>
+    <footer>
+        <p>bankofmerits@gmail.com</p>
+        <p>copyright@2024</p>
+    </footer>
+  </main>
+   <script src="homescript.js"></script>
+</body>
+</html>
