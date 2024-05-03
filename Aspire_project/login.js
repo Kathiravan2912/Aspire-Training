@@ -28,26 +28,26 @@ async function adminPage(){
 
         // console.log(result);
 
-        let formData= {
-            userName: username,
-            password: password
-        };
+        // let formData= {
+        //     userName: username,
+        //     password: password
+        // };
 
 
-        const result = await fetch("http://localhost:3001/sign_in", {
-            method: 'POST', // specify the method
-            headers: {
-                'Content-Type': 'application/json' // specify the content type
-            },
-            body: JSON.stringify(formData) // convert data to JSON string
-        });
+        // const result = await fetch("http://localhost:3001/sign_in", {
+        //     method: 'POST', // specify the method
+        //     headers: {
+        //         'Content-Type': 'application/json' // specify the content type
+        //     },
+        //     body: JSON.stringify(formData) // convert data to JSON string
+        // });
 
-        const resultJson = await result.json();
-        console.log(resultJson);
-
-
+        // const resultJson = await result.json();
+        // console.log(resultJson);
 
 
-        // window.location.href = 'home.html';
+
+
+        window.location.href = 'home.html';
     }
 }
