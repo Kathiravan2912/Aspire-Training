@@ -13,7 +13,7 @@ async function connectToMongoDB() {
         const db = client.db('kathir');
         const collection = db.collection('employees');
 
-        const filter = { Branch: 'A' }; // Filter to identify documents to update
+        const filter = { Branch: 'A' }; 
         const update = { $set: { Salary: 30000 } }; // Update operation
 
         const result = await collection.updateMany(filter, update);
