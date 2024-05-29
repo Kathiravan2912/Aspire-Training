@@ -1,0 +1,113 @@
+<!-- Author name: Kathiravan A
+Created date: 14.05.2024
+project: Employee page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank of Merits - Employees</title>
+    <link rel="stylesheet" href="customer_style.css">
+</head>
+<body>
+    <div class="topic">Bank of Merits - Employees data</div>
+    <div class="body">
+    <div class="container">
+        <div class="sidebar">
+            <h3>Employee Category</h3>
+            <ul>
+                <li id="higher" class="option" onclick="showContent('higher')">Account Holders</li>
+                <li id="normal" class="option" onclick="showContent('normal')">Loan Purchased Customers</li>
+                <li id="nonTech" class="option" onclick="showContent('nonTech')">Saving Account Holders</li>
+            </ul>
+            <div class="homepage-btn" id="homepage-btn" onclick="gotoHomepage()">Back To Homepage</div>
+        </div>
+        <div class="main-content">
+            <div id="content-higher" class="content">
+                <h2>Account Holders</h2>
+                <button class="openFormBtn" onclick="openForm('higher')">Add Data</button>
+                <div id="formPopup-higher" class="form-popup">
+                    <form id="dataForm-higher" class="form-container" onsubmit="handleSubmit(event, 'higher')">
+                        <h2>Add Data</h2>
+                        <input type="hidden" id="userId-higher">
+                        <label for="name-higher"><b>Name</b></label>
+                        <input type="text" id="name-higher" required>
+                        <label for="email-higher"><b>Email</b></label>
+                        <input type="email" id="email-higher" required>
+                        <button type="submit" class="btn">Save</button>
+                        <button type="button" class="btn cancel" onclick="closeForm('higher')">Close</button>
+                    </form>
+                </div>
+                <table id="dataTable-higher">
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div id="content-normal" class="content">
+                <h2>Loan Purchased Customers</h2>
+                <button class="openFormBtn" onclick="openForm('normal')">Add Data</button>
+                <div id="formPopup-normal" class="form-popup">
+                    <form id="dataForm-normal" class="form-container" onsubmit="handleSubmit(event, 'normal')">
+                        <h2>Add Data</h2>
+                        <input type="hidden" id="userId-normal">
+                        <label for="name-normal"><b>Name</b></label>
+                        <input type="text" id="name-normal" required>
+                        <label for="email-normal"><b>Email</b></label>
+                        <input type="email" id="email-normal" required>
+                        <button type="submit" class="btn">Save</button>
+                        <button type="button" class="btn cancel" onclick="closeForm('normal')">Close</button>
+                    </form>
+                </div>
+                <table id="dataTable-normal">
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div id="content-nonTech" class="content">
+                <h2>Saving Account Holders</h2>
+                <button class="openFormBtn" onclick="openForm('nonTech')">Add Data</button>
+                <div id="formPopup-nonTech" class="form-popup">
+                    <form id="dataForm-nonTech" class="form-container" onsubmit="handleSubmit(event, 'nonTech')">
+                        <h2>Add Data</h2>
+                        <input type="hidden" id="userId-nonTech">
+                        <label for="name-nonTech"><b>Name</b></label>
+                        <input type="text" id="name-nonTech" required>
+                        <label for="email-nonTech"><b>Email</b></label>
+                        <input type="email" id="email-nonTech" required>
+                        <button type="submit" class="btn">Save</button>
+                        <button type="button" class="btn cancel" onclick="closeForm('nonTech')">Close</button>
+                    </form>
+                </div>
+                <table id="dataTable-nonTech">
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="customers_script.js"></script>
+</body>
+</html>
