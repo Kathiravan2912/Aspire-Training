@@ -23,7 +23,7 @@ if (!studentIds.has(newStudentId)) {
 
 
 let registrationQueue = ["01", "03"];
-registrationQueue.push("02");
+registrationQueue.push("02");   
 
 
 while (registrationQueue.length > 0) {
