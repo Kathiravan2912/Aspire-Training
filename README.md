@@ -1,2 +1,2 @@
 # Aspire-Training
-Repository for Aspire systems Assesments.
+Repository for Aspire systems Training.
