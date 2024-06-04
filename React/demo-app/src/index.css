@@ -11,3 +11,121 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+h1,h4,.topic,.info{
+display: block;
+text-align: center;
+}
+.body-register {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4%;
+  padding: 20px 0 20px 0;
+}
+
+.register-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  width: 350px;
+}
+
+register h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.register-group {
+  margin-bottom: 15px;
+}
+
+.register-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.register-group input {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+
+/* login styles */
+
+.body-login {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4%;
+  padding: 20px 0 20px 0;
+}
+
+.login-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 7px 10px rgba(0, 0, 0, 0.1);
+  width: 350px;
+}
+
+login h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-group {
+  margin-bottom: 15px;
+}
+
+.login-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.login-group input {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
