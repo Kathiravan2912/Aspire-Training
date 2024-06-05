@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-export default class Registration extends Component {
+export default class Login extends Component {
     render() {
         return (
             <div>
@@ -11,11 +11,11 @@ export default class Registration extends Component {
                             <h2>Login</h2>
                             <div class="login-group">
                                 <label for="username">Username:</label>
-                                <input type="text"></input>
+                                <input type="text" id="username"></input>
                             </div>
                             <div class="login-group">
                                 <label for="password">Password:</label>
-                                <input type="password"></input>
+                                <input type="password" id="password"></input>
                             </div>
                             <button type="submit">Login</button>
                         </login>

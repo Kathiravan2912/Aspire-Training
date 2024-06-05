@@ -33,7 +33,7 @@ text-align: center;
   width: 350px;
 }
 
-register h2 {
+.register h2 {
   text-align: center;
   margin-bottom: 20px;
 }
@@ -92,7 +92,7 @@ button:hover {
   width: 350px;
 }
 
-login h2 {
+.login h2 {
   text-align: center;
   margin-bottom: 20px;
 }
