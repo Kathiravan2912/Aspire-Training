@@ -129,3 +129,41 @@ button {
 button:hover {
   background-color: #218838;
 }
+
+/*Data entry css*/
+
+.Employee-data-container{
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4%;
+  padding: 20px 0 20px 0;
+}
+
+.Employee-data-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 7px 10px rgba(0, 0, 0, 0.1);
+  width: 350px;
+}
+
+.Employee-data-form label {
+  color: #000000;
+}
+
+.Employee-data-form input {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Add to cart styles */
+
+.add-to-cart-button{
+  width: 10%;
+}
