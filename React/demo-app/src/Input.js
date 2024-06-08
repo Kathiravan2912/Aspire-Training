@@ -33,7 +33,7 @@ export default class Input extends Component {
 
     render(){
         return (<div>
-            <h3>Hi {this.state.username}, You are from {this.state.Department} Department and Your Id is {this.state.Id}</h3>
+            {/* <h3>Hi {this.state.username}, You are from {this.state.Department} Department and Your Id is {this.state.Id}</h3> */}
             <div className='Employee-data-container'>
             <div className='Employee-data-form'>
             <h3 className='Topic'>Employee Details</h3>
