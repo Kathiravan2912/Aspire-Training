@@ -87,8 +87,13 @@ export default class Cart extends Component {
         })  
     }
     showAlert = () => {
+        if(this.state.cart === 0 && this.state.totalAmount === 0){
+            alert(`You Have not purchased Any Product!`);
+        }
+        else{
         alert(`Your order for ${this.state.cart} products with amount of ${this.state.totalAmount} has been confirmed!`);
         window.location.reload();
+        }
     };
 
     render() {
@@ -162,3 +167,6 @@ export default class Cart extends Component {
         )
     }
 }
+
+
+
