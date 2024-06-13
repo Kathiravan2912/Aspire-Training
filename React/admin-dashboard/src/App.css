@@ -36,17 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-/* Nav css */
-.lists{
-  background-color: rgb(162, 159, 159);
-}
-.options{
-  display: inline-block;
-  font-size: large;
-  padding: 1%;
-  color: white;
-  background-color: black;
-  margin: 7px 20px;
-  border-radius: 6px;
-}

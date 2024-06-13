@@ -1,23 +1,23 @@
-import Cart from './Cart'
-import Input from './Input'
-import Login from './Login';
-import ConditionalRendering from './conditionalRendering';
 import './App.css';
-import WishLabel from './wishLabel';
-import LoginButton from './LoginButton';
-import LogoutButton from './LogoutButton';
-import LoginControl from './loginControl';
-import GuestGreeting from './GuestGreeting';
-import Greetings from './Greetings';
+import Nav from './Nav';
+import { Route, Link, BrowserRouter as Router, BrowserRouter, Routes } from 'react-router-dom';
+import ContactUs from './ContactUs';
+import Home from './Home';
+import Product from './Product';
+import MenShirts from './MenShirts';
 function App() {
   return (
     <div>
-      <LoginButton/>
-      <LogoutButton/>
-      <loginControl/>
-      <GuestGreeting/>
-
-    </div>
+      <BrowserRouter>
+      <Nav/>
+      <Routes>
+        <Route path='Home' element={<Home/>}></Route>
+        <Route path='Product' element={<Product/>}></Route>
+        <Route path='ContactUs' element={<ContactUs/>}></Route>
+        <Route path='/Home/MenShirts' element={<MenShirts/>}></Route>
+      </Routes>
+      </BrowserRouter >
+      </div >
   );
 }
 
