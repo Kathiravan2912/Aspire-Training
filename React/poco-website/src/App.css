@@ -1,0 +1,151 @@
+.yellow-line{
+  display: block;
+  background-color: rgb(242, 242, 35);
+  height: 2px;
+}
+.Head-options{
+  background-color: rgb(41, 41, 41);
+  padding: 2px 0px 2px 0px;
+}
+.logo{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: rgb(255, 255, 39);
+  padding: 8px;
+  font-size: xx-large;
+}
+.logo:hover{
+  transform: scale(1);
+  cursor: none;
+}
+
+li{
+  display: inline-block;
+}
+.Home-option1{
+  margin-left: 72%;
+  color: white;
+  padding: 6px;
+  font-size: large;
+}
+.Home-option2{
+  color: white;
+  padding: 6px;
+  font-size: large;
+}
+.Home-option3{
+  color: white;
+  padding: 6px;
+  font-size: large;
+}
+.Home-option1:hover,.Home-option2:hover,.Home-option3:hover{
+  cursor: pointer;
+  transform: scale(1.08);
+  transition-duration: 100ms;
+}
+.product-options{
+  margin-top: 0;
+  font-size: large;
+  padding: 25px 0px 25px 0px;
+  background-color: rgb(46, 46, 46);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  column-gap: 3%;
+}
+
+.product-options-list{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+li:hover{
+  cursor: pointer;
+  transform: scale(1.08);
+  transition-duration: 100ms;
+}
+.category{
+  margin-left:11%;
+}
+
+.tagLine{
+  margin-top: -2%;
+  height: 880px;
+  background-image: url('./images/main-wallpaper.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.tagLine h2{
+  text-align: center;
+  font-size: xx-large;
+  color: white;
+}
+
+.arrow{
+  position: absolute;
+  background-color: black;
+  border: none;
+  border-radius: 50%;
+  margin-top: -6%;
+  margin-left: 93%;
+  font-size: 350%;
+}
+.arrow:hover{
+  cursor: pointer;
+}
+.end-line{
+  height: 40px;
+  background-color: black;
+}
+
+.follow{
+  text-align: center;
+  margin-top: 0;
+  padding-bottom: 10px;
+  background-color: rgb(170, 170, 170);
+}
+li img{
+  height: 25px;
+  width: 25px;
+}
+
+ul .icons{
+  display: flex;          
+  justify-content: center; 
+  align-items: center; 
+}
+
+ul li{
+  padding: 10px;  
+}
+li img:hover{
+  transform: scale(1.03);
+  transition-duration: 100ms;
+}
+.contactUs{
+  text-align: center;
+}
+input{
+  height: 30px;
+  width: 400px;
+  border-radius: 7px;
+}
+textarea{
+  height: 40px;
+  width:400px;
+  border-radius: 5px;
+  border: solid black 2px;
+}
+
+.submit{
+  padding: 5px 50px 5px 50px;
+  font-size: large;
+  margin-top: 1%;
+  margin-bottom: 5%;
+  border-radius: 6px;
+  color: white;
+  background-color: rgb(74, 74, 74);
+  border: none;
+}
+.submit:hover{
+  background-color: rgb(0,0,0);
+  transition-duration: 100ms;
+}
