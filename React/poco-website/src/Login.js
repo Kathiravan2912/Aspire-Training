@@ -1,23 +1,32 @@
-import React,{Component} from "react";
-export class Login extends Component{
-    render(){
-         return (
-            <div>
-                <h1 style={{Color:'Red'}}>LOGIN</h1>
-                <table>
-                    <tr>
-                        <td>UserName: </td>
-                        <td><input type="text" required></input></td>
-                    </tr>
-                    <tr>
-                        <td>E-Mail:</td>
-                        <td><input type="Email" required></input></td>
-                    </tr>
-                </table>
-                <button className="login">LOGIN</button>
-            </div>
-         )
-    }
-}
+ import React, { Component } from "react";
+ import "./LoginStyle.css";
 
-export default Login
+ export class Login extends Component {
+     render() {
+         return (
+             <div className="body">
+                <div class="container">
+                    <form class="login-form" id="loginForm">
+                        <h2>Login to Poco Mobiles Community</h2>
+                        <div class="input-group">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" name="username" required/>
+                        </div>
+                        <div class="input-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" required/>
+                        </div>
+                        <button type="submit">LOGIN</button>
+                        <div class="extra-links">
+                            <a href="#">Forgot Password?</a>
+                            <a href="#">Create Account</a>
+                        </div>
+                    </form>
+                </div>
+
+             </div>
+         )
+     }
+ }
+
+ export default Login

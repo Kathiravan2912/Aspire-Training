@@ -1,29 +1,23 @@
-import React, { Component } from 'react';
+import React, {Component } from 'react';
+import { Link } from "react-router-dom";
 
 export class PocoMain extends Component {
+    
     render() {
         return (
             <div>
-                <div className='yellow-line'></div>
-                <div className='Head-options'>
-                    <ul className='mainList'>
-                        <li className='logo'>POCO</li>
-                        <li className='Home-option1'>HOME</li> |
-                        <li className='Home-option2'>LOGIN</li> |
-                        <li className='Home-option3'>SIGN UP</li>
-                    </ul>
-                </div>
                 <div className='Product-category'>
-                    <ul className='product-options'>
-                        <li className='category'>POCO-BUDGET MAKER</li>
-                        <li>POCO C-SERIES</li>
-                        <li>POCO M-SERIES</li>
-                        <li>POCO X-SERIES</li>
-                        <li>POCO F-SERIES</li>
-                        <li>FOR GAMERS</li>
-                        <li>NEW ARRIVED</li>
-                    </ul>
-                </div>
+                        <ul className='product-options'>
+                            <li><Link className="product-options-list" to='/Home/Products'>POCO-C-SERIES</Link></li>
+                            <li><Link className="product-options-list"  to='/Home/Products'>POCO-M-SERIES</Link></li>
+                            <li><Link className="product-options-list"  to='/Home/X_Series'>POCO-X-SERIES</Link></li>
+                            <li><Link className="product-options-list"  to='/Home/Products'>POCO-F-SERIES</Link></li>
+                            <li><Link className="product-options-list"  to='/Home/Products'>POCO-BUDGET</Link></li>
+                            <li><Link className="product-options-list"  to='/Home/Products'>FOR-GAMERS</Link></li>
+                            <li><Link className="product-options-list"  to='/Home/Products'>NEWLY-ARRIVED</Link></li>
+                            <li><Link className="product-options-list"  to='/Home/Products'>COMING-UP!</Link></li>
+                        </ul>
+                    </div>
                 <div className='tagLine'>
                         <h2>WHAT YOU NEED WHEN POCO IS HERE!!!</h2>
                         <h2>CHOOSE POCO, CHOOSE HAPPINESS...</h2>
@@ -57,3 +51,39 @@ export class PocoMain extends Component {
 }
 
 export default PocoMain
+
+
+
+
+
+
+// import React, { useState, useEffect } from 'react';
+// import './ImageSlide.css';
+
+// const images = [
+//     'images/slide1.jpg',
+//     'images/slide2.jpg',
+//     'images/slide3.jpg',
+//     'images/slide4.jpg',
+//     'images/slide5.jpg',
+// ];
+
+// const Slideshow = () => {
+//     const [currentIndex, setCurrentIndex] = useState(0);
+
+//     useEffect(() => {
+//         const interval = setInterval(() => {
+//             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+//         }, 1000);
+
+//         return () => clearInterval(interval);
+//     }, []);
+
+//     return (
+//         <div className="slideshow">
+//             <img src={images[currentIndex]} alt={`slide ${currentIndex}`} className="slide-image" />
+//         </div>
+//     );
+// };
+
+// export default Slideshow;

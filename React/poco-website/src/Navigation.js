@@ -9,9 +9,9 @@ export class Navigation extends Component {
                 <div className='Head-options'>
                     <ul className='mainList'>
                         <li className='logo'>POCO</li>
-                        <Link to='Home'><li className="Home-option1">HOME</li>|</Link>
-                        <Link to='Product'><li className="Home-option2">LOGIN</li>|</Link>
-                        <Link to='ContactUs'><li className="Home-option3">SIGNUP</li></Link>
+                        <Link to='PocoMain'><li className="Home-option1">HOME</li>|</Link>
+                        <Link to='Login'><li className="Home-option2">LOGIN</li>|</Link>
+                        <Link to='SignUp'><li className="Home-option3">SIGNUP</li></Link>
                     </ul>
                 </div>
             </div>
@@ -20,3 +20,8 @@ export class Navigation extends Component {
 }
 
 export default Navigation
+
+
+// const [login, setLogin] = useState(false);
+
+// islogin(true){}

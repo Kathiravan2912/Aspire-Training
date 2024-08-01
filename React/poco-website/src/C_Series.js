@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import './PocoX.css';
-export class X_Series extends Component {
+export class C_Series extends Component {
 
     render() {
         return (
@@ -96,4 +96,4 @@ export class X_Series extends Component {
     }
 }
 
-export default X_Series
+export default C_Series

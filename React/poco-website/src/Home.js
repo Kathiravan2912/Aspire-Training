@@ -8,14 +8,14 @@ export class Home extends Component {
                 <div>
                     <div className='Product-category'>
                         <ul className='product-options'>
-                            <li><Link className="product-options-list" to='/Home/Products'>POCO-C-SERIES</Link></li>
-                            <li><Link className="product-options-list"  to='/Home/Products'>POCO-M-SERIES</Link></li>
+                            <li><Link className="product-options-list"  to='/Home/C_Series'>POCO-C-SERIES</Link></li>
+                            <li><Link className="product-options-list"  to='/Home/C_Series'>POCO-M-SERIES</Link></li>
                             <li><Link className="product-options-list"  to='/Home/X_Series'>POCO-X-SERIES</Link></li>
-                            <li><Link className="product-options-list"  to='/Home/Products'>POCO-F-SERIES</Link></li>
-                            <li><Link className="product-options-list"  to='/Home/Products'>POCO-BUDGET</Link></li>
-                            <li><Link className="product-options-list"  to='/Home/Products'>FOR-GAMERS</Link></li>
-                            <li><Link className="product-options-list"  to='/Home/Products'>NEWLY-ARRIVED</Link></li>
-                            <li><Link className="product-options-list"  to='/Home/Products'>COMING-UP!</Link></li>
+                            <li><Link className="product-options-list"  to='/Home/C_Series'>POCO-F-SERIES</Link></li>
+                            <li><Link className="product-options-list"  to='/Home/C_Series'>POCO-BUDGET</Link></li>
+                            <li><Link className="product-options-list"  to='/Home/C_Series'>FOR-GAMERS</Link></li>
+                            <li><Link className="product-options-list"  to='/Home/C_Series'>NEWLY-ARRIVED</Link></li>
+                            <li><Link className="product-options-list"  to='/Home/C_Series'>COMING-UP!</Link></li>
                         </ul>
                     </div>
                     <div className='tagLine'>
