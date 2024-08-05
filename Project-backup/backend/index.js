@@ -1,38 +1,37 @@
-
-// const mongoose = require('mongoose')
-// const N_EmpSchema = require('./schema/normalEmp_schema')
-
-
+// const mongoose = require('mongoose');
 // const express = require('express');
 // const app = express();
+// const bodyParser = require('body-parser');
+// const cors = require('cors');
 
-// var bodyParser = require('body-parser')
-// app.use(bodyParser.urlencoded({ extended: false }))
-// app.use(bodyParser.json()); // Parse incoming JSON data
-
-
-
-// const cors = require('cors')
-// app.use(cors())
-
-// //Higheer Employee Data
+// // Import routes
 // const EMPLOYEE = require('./controllers/employee')
-// app.use('/', EMPLOYEE)
+// const Normal_Emp = require('./controllers/normalEmp');
+// const Customers = require('./controllers/customer')
+// // const adminLogin = require('./controllers/adminDataCon')
 
-// //normal Employee Data
-// const Normal_Emp = require('./controllers/normalEmp')
-// app.use('/',Normal_Emp)
+// // Middleware
+// app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(bodyParser.json());
+// app.use(cors());
 
+
+// // //Employee Data
+
+// app.use('/', Normal_Emp)
+// app.use('/', Customers)
+// // app.use('/', adminLogin)
+
+// // Connect to MongoDB
 // mongoose.connect('mongodb://127.0.0.1:27017/kathirDB')
-//   .then(() => console.log('Connected!'))
-
+//   .then(() => console.log('Connected to MongoDB'))
+//   .catch(err => console.error('Could not connect to MongoDB:', err));
 
 // const PORT = 3000;
 // app.listen(PORT, () => {
 //   console.log(`Server running on port ${PORT}`);
 // });
 
-//second try
 
 const mongoose = require('mongoose');
 const express = require('express');
@@ -41,24 +40,22 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 // Import routes
-const EMPLOYEE = require('./controllers/employee')
 const Normal_Emp = require('./controllers/normalEmp');
-const adminLogin = require('./controllers/adminDataCon')
+const Customers = require('./controllers/customer');
+const Events = require('./controllers/events')
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 
-
-// //Higheer Employee Data
-
-app.use('/', EMPLOYEE)
-app.use('/', Normal_Emp)
-app.use('/', adminLogin)
+// Routes
+app.use('/', Normal_Emp);
+app.use('/', Customers);
+app.use('/', Events);
 
 // Connect to MongoDB
-mongoose.connect('mongodb://127.0.0.1:27017/kathirDB')
+mongoose.connect('mongodb://127.0.0.1:27017/kathirDB', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('Could not connect to MongoDB:', err));
 
