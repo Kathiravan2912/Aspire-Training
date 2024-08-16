@@ -1,0 +1,7 @@
+First in First out
+ordered List
+holds element which are need to be processed
+types:
+    priority queue,
+    deque(double ended operation),
+    array deque.

@@ -1,0 +1,34 @@
+// default capacity = 10;
+// null value = yes;
+// duplicate value = yes;
+// order = insertion order;
+// synchronized = yes;
+// thread Safeety = yes;
+// similar to arrayList, but has extra methods
+
+import java.util.Iterator;
+import java.util.Vector;
+
+public class vector {
+    public static void main(String[] args) {
+        Vector <String> Students = new Vector<String>();
+
+        Students.add(null);
+        Students.add("kathir");
+        Students.add("arun");
+        Students.add("bharath");
+        Students.add("hema");
+        Students.add("priya");
+        Students.add("kamal");
+        Students.add("henry");
+        Students.add("nithiya");
+        Students.remove("arun");
+        int index = 1;
+        @SuppressWarnings("rawtypes")
+        Iterator itr = Students.iterator();
+        for( int i=1; i<=Students.size(); i++){
+            System.out.println("Student name"+ index + ":" + itr.next());  
+            index = index+1;
+    }
+}
+}

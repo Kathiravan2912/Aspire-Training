@@ -1,0 +1,9 @@
+no duplicates
+unique elemets
+only one null value
+no thread safety
+
+Types:
+    Hashset,
+    LinkedHashset,
+    Treeset

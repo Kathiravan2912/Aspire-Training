@@ -1,0 +1,6 @@
+key value pair known as entry
+unique keys , but have duplicate values
+operations based on keys
+
+
+hash, linked hash. tree
