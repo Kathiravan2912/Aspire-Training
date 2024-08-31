@@ -22,6 +22,8 @@ public class arrayDeque {
         // Students.add(null);
         Students.add("kathir");
         Students.add("arun");
+        Students.add("kathir");
+        Students.add("arun");
         Students.add("bharath");
         Students.add("hema");
         Students.add("priya");
