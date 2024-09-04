@@ -1,0 +1,239 @@
+/* Container for the entire component */
+div {
+  font-family: Arial, sans-serif;
+}
+
+/* Main topic header */
+.mainTopic {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Add Data button */
+.addDataBtn {
+  color: white;
+  background-color: rgb(16, 175, 16);
+  border: none;
+  border-radius: 5px;
+  padding: 13px 29px;
+  font-size: large;
+}
+
+.addDataBtn:hover {
+  cursor: pointer;
+  background-color: #239c3f;
+  transition-duration: 200ms;
+}
+
+/* Search bar */
+.search-bar input[type="text"] {
+  margin-top: 1%;
+  margin-bottom: 2%;
+  border-radius: 5px;
+  width: 96%;
+  height: 35px;
+  font-size: large;
+  padding: 0 10px;
+}
+
+/* Form overlay */
+.form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Styles for the form container */
+.form-container {
+  position: relative;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 2%;
+  width: 400px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+input {
+  margin-bottom: 5%;
+}
+
+/* Close button (X) */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+.close-button:hover {
+  color: #dc3545; /* Hover effect for close button */
+}
+
+/* Form input fields styling */
+.form-container label {
+  display: block;
+  margin-bottom: 3px;
+  font-weight: bold;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Submit and Cancel Buttons */
+.form-container button[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  font-size: large;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #28a745;
+  color: white;
+  margin-right: 10px;
+}
+
+.form-container button[type="button"] {
+  padding: 10px 20px;
+  border: none;
+  font-size: large;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #dc3545;
+  color: white;
+}
+
+.optionBtns {
+  text-align: center;
+}
+
+.form-container button[type="button"]:hover {
+  background-color: #f7162d;
+}
+
+.form-container button[type="submit"]:hover {
+  background-color: rgb(26, 197, 26);
+}
+
+/* Global error message */
+.error {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 4px;
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 500px) {
+  .form-container {
+    width: 90%;
+  }
+}
+
+/* Awards table styles */
+.award-table {
+  width: 96%;
+  margin-right: 16px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #919191;
+}
+
+/* Table styling */
+.award-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+/* Table header styling */
+.award-table thead {
+  background-color: #e9ecef;
+}
+
+.award-table th {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 2px solid #ddd;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Table body styling */
+.award-table tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.award-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.award-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  color: #555;
+  text-align: center;
+}
+
+/* No data available message styling */
+.no-data {
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  color: #777;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .award-table table {
+    font-size: 14px;
+  }
+
+  .award-table th,
+  .award-table td {
+    padding: 8px;
+  }
+}
+
+/* Edit and Delete buttons */
+.editBtn {
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  padding: 4px 6px;
+  color: white;
+  margin-right: 3px;
+}
+
+.deleteBtn {
+  background-color: #dc3545;
+  border: none;
+  border-radius: 5px;
+  padding: 4px 6px;
+  color: white;
+}
+
+.editBtn:hover {
+  background-color: #0056b3;
+}
+
+.deleteBtn:hover {
+  background-color: #c82333;
+}

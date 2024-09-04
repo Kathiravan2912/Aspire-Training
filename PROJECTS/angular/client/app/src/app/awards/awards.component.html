@@ -1,0 +1,107 @@
+<div>
+  <h2 class="mainTopic">AWARD MANAGEMENT</h2>
+  <button (click)="toggleForm()" class="addDataBtn">Add Data</button>
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input
+      type="text"
+      placeholder="Search awards..."
+      [(ngModel)]="searchQuery"
+      (input)="filterAwards()"
+    />
+  </div>
+
+  <!-- Table to display award data -->
+  <div class="award-table">
+    <table *ngIf="filteredAwards.length > 0">
+      <thead>
+        <tr>
+          <th>Award Name</th>
+          <th>Description</th>
+          <th>Date</th>
+          <th>Place</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let award of filteredAwards">
+          <td>{{ award.name }}</td>
+          <td>{{ award.description }}</td>
+          <td>{{ award.date }}</td>
+          <td>{{ award.place }}</td>
+          <td>
+            <!-- Edit button -->
+            <button (click)="onEdit(award)" class="editBtn">
+              <i class="fas fa-edit"></i>
+            </button>
+            <!-- Delete button -->
+            <button (click)="onDelete(award._id)" class="deleteBtn">
+              <i class="fas fa-trash"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div *ngIf="filteredAwards.length === 0" class="no-data">
+      No award data available.
+    </div>
+  </div>
+
+  <div *ngIf="showForm" class="form-overlay">
+    <div class="form-container">
+      <h3 style="text-align: center;">Enter Award Details</h3>
+      <button class="close-button" (click)="toggleForm()">×</button>
+
+      <form [formGroup]="awardForm" (ngSubmit)="onSubmit()">
+        <!-- Name Field -->
+        <div>
+          <label for="name">Name:</label>
+          <input id="name" formControlName="name" type="text" required />
+          <div *ngIf="formControls['name'].invalid && formControls['name'].touched" class="error">
+            <span *ngIf="formControls['name'].errors?.['required']">Name is required.</span>
+          </div>
+        </div>
+
+        <!-- Description Field -->
+        <div>
+          <label for="description">Description:</label>
+          <input id="description" formControlName="description" type="text" required />
+          <div *ngIf="formControls['description'].invalid && formControls['description'].touched" class="error">
+            <span *ngIf="formControls['description'].errors?.['required']">Description is required.</span>
+          </div>
+        </div>
+
+        <!-- Date Field -->
+        <div>
+          <label for="date">Date:</label>
+          <input id="date" formControlName="date" type="date" required />
+          <div *ngIf="formControls['date'].invalid && formControls['date'].touched" class="error">
+            <span *ngIf="formControls['date'].errors?.['required']">Date is required.</span>
+          </div>
+        </div>
+
+        <!-- Place Field -->
+        <div>
+          <label for="place">Place:</label>
+          <input id="place" formControlName="place" type="text" required />
+          <div *ngIf="formControls['place'].invalid && formControls['place'].touched" class="error">
+            <span *ngIf="formControls['place'].errors?.['required']">Place is required.</span>
+          </div>
+        </div>
+
+        <!-- Submit and Cancel Buttons -->
+        <div class="optionBtns">
+          <button type="submit">Submit</button>
+          <button type="button" (click)="toggleForm()">Cancel</button>
+        </div>
+      </form>
+
+      <!-- Global Error Message for Empty Fields -->
+      <div *ngIf="formSubmitAttempt && awardForm.invalid" class="error global-error">
+        <p>All fields are required. Please fill out the form completely.</p>
+      </div>
+    </div>
+  </div>
+</div>

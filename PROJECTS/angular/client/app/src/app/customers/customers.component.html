@@ -1,0 +1,121 @@
+<div>
+  <h2 class="mainTopic">CUSTOMER MANAGEMENT</h2>
+  <button (click)="toggleForm()" class="addDataBtn">Add Data</button>
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input
+      type="text"
+      placeholder="Search customers..."
+      [(ngModel)]="searchQuery"
+      (input)="filterCustomers()"
+    />
+  </div>
+
+  <!-- Table to display customer data -->
+  <div class="customer-table">
+    <table *ngIf="filteredCustomers.length > 0">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Mobile Number</th>
+          <th>Account Number</th>
+          <th>Address</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let customer of filteredCustomers">
+          <td>{{ customer.name }}</td>
+          <td>{{ customer.email }}</td>
+          <td>{{ customer.mobileNumber }}</td>
+          <td>{{ customer.accountNumber }}</td>
+          <td>{{ customer.address }}</td>
+          <td>
+            <!-- Edit button -->
+            <button (click)="onEdit(customer)" class="editBtn">
+              <i class="fas fa-edit"></i>
+            </button>
+            <!-- Delete button -->
+            <button (click)="onDelete(customer._id)" class="deleteBtn">
+              <i class="fas fa-trash"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div *ngIf="filteredCustomers.length === 0" class="no-data">
+      No customer data available.
+    </div>
+  </div>
+
+  <div *ngIf="showForm" class="form-overlay">
+    <div class="form-container">
+      <h3 style="text-align: center;">Enter the details</h3>
+      <button class="close-button" (click)="toggleForm()">×</button>
+
+      <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+        <!-- Name Field -->
+        <div>
+          <label for="name">Name:</label>
+          <input id="name" formControlName="name" type="text" required />
+          <div *ngIf="formControls['name'].invalid && formControls['name'].touched" class="error">
+            <span *ngIf="formControls['name'].errors?.['required']">Name is required.</span>
+          </div>
+        </div>
+
+        <!-- Email Field -->
+        <div>
+          <label for="email">Email:</label>
+          <input id="email" formControlName="email" type="email" required />
+          <div *ngIf="formControls['email'].invalid && formControls['email'].touched" class="error">
+            <span *ngIf="formControls['email'].errors?.['required']">Email is required.</span>
+            <span *ngIf="formControls['email'].errors?.['email']">Enter a valid email address.</span>
+          </div>
+        </div>
+
+        <!-- Mobile Number Field -->
+        <div>
+          <label for="mobileNumber">Mobile Number:</label>
+          <input id="mobileNumber" formControlName="mobileNumber" type="text" required />
+          <div *ngIf="formControls['mobileNumber'].invalid && formControls['mobileNumber'].touched" class="error">
+            <span *ngIf="formControls['mobileNumber'].errors?.['required']">Mobile number is required.</span>
+            <span *ngIf="formControls['mobileNumber'].errors?.['pattern']">Mobile number must be exactly 10 digits.</span>
+          </div>
+        </div>
+
+        <!-- Account Number Field -->
+        <div>
+          <label for="accountNumber">Account Number:</label>
+          <input id="accountNumber" formControlName="accountNumber" type="text" required />
+          <div *ngIf="formControls['accountNumber'].invalid && formControls['accountNumber'].touched" class="error">
+            <span *ngIf="formControls['accountNumber'].errors?.['required']">Account number is required.</span>
+            <span *ngIf="formControls['accountNumber'].errors?.['pattern']">Account number must be exactly 12 digits.</span>
+          </div>
+        </div>
+
+        <!-- Address Field -->
+        <div>
+          <label for="address">Address:</label>
+          <input id="address" formControlName="address" type="text" required />
+          <div *ngIf="formControls['address'].invalid && formControls['address'].touched" class="error">
+            <span *ngIf="formControls['address'].errors?.['required']">Address is required.</span>
+          </div>
+        </div>
+
+        <!-- Submit and Cancel Buttons -->
+        <div class="Btn">
+          <button type="submit">Submit</button>
+          <button type="button" (click)="toggleForm()">Cancel</button>
+        </div>
+      </form>
+
+      <!-- Global Error Message for Empty Fields -->
+      <div *ngIf="formSubmitAttempt && customerForm.invalid" class="error global-error">
+        <p>All fields are required. Please fill out the form completely.</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,144 @@
+<div class="mainContainer">
+  <header>
+    <button class="login-btn" (click)="toggleLogin()">Login</button>
+  </header>
+
+  <div class="login-container" *ngIf="showLoginForm">
+    <button class="close-btn" (click)="toggleLogin()">×</button>
+    <h2>Login</h2>
+    <form (ngSubmit)="onLogin()">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input
+          id="username"
+          type="text"
+          [(ngModel)]="name"
+          name="username"
+          required
+          class="form-control"
+        />
+        <div *ngIf="!name.trim()" class="error">
+          Username is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input
+          id="password"
+          type="password"
+          [(ngModel)]="password"
+          name="password"
+          required
+          minlength="6"
+          class="form-control"
+        />
+        <div *ngIf="!password.trim()" class="error">
+          Password is required.
+        </div>
+        <div *ngIf="password.length < 6 && password !== ''" class="error">
+          Password must be at least 6 characters long.
+        </div>
+      </div>
+
+      <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+      </div>
+
+      <button
+        type="submit"
+        [disabled]="!name || !password || password.length < 6"
+        class="btn btn-primary"
+      >
+        Login
+      </button>
+      <a href="#">Forgotten Password?</a>
+    </form>
+  </div>
+
+  <div class="landing-page">
+    <header>
+      <h1>Welcome to Data management of Organization</h1>
+    </header>
+
+    <section class="about-organization">
+      <h2>About Us</h2>
+      <div class="images">
+        <img
+          src="https://via.placeholder.com/400x300?text=Organization+1"
+          alt="Organization Image 1"
+        />
+
+        <img
+          src="https://via.placeholder.com/400x300?text=Organization+2"
+          alt="Organization Image 2"
+        />
+        <img
+          src="https://via.placeholder.com/400x300?text=Organization+3"
+          alt="Organization Image 3"
+        />
+        <img
+          src="https://via.placeholder.com/400x300?text=Organization+4"
+          alt="Organization Image 4"
+        />
+      </div>
+    </section>
+
+    <section class="about-founders">
+      <h2>Our Founders</h2>
+      <div class="images">
+        <img
+          src="https://via.placeholder.com/400x300?text=Founder+1"
+          alt="Founder Image 1"       
+        />
+
+        <img
+          src="https://via.placeholder.com/400x300?text=Founder+2"
+          alt="Founder Image 2"
+        />
+        <img
+          src="https://via.placeholder.com/400x300?text=Founder+3"
+          alt="Founder Image 3"
+        />
+      </div>
+    </section>
+
+    <section class="about-services">
+      <h2>Our Services</h2>
+      <div class="images">
+        <img
+          src="https://via.placeholder.com/400x300?text=Service+1"
+          alt="Service Image 1"
+        />
+        <img
+          src="https://via.placeholder.com/400x300?text=Service+2"
+          alt="Service Image 2"
+        />
+        <img
+          src="https://via.placeholder.com/400x300?text=Service+3"
+          alt="Service Image 3"
+        />
+        <img
+          src="https://via.placeholder.com/400x300?text=Service+4"
+          alt="Service Image 4"
+        />
+      </div>
+    </section>
+
+    <section class="contact">
+      <h2>Contact Us</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </div>
+</div>

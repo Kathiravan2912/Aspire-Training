@@ -1,0 +1,56 @@
+<div>
+  <h4 class="subtopic">DATA MANAGEMENT</h4>
+  <div class="management-container">
+    <div class="sidebar">
+      <ul>
+        <h3>EMPLOYEE CATEGORY</h3>
+        <li
+          [class.active]="activeOption === 'employees'"
+          (click)="navigateTo('employees')"
+        >
+          <mat-icon style="vertical-align: middle">work</mat-icon>
+          <span style="vertical-align: middle"> Employees</span>
+        </li>
+        <h3>CUSTOMER CATEGORY</h3>
+        <li
+          [class.active]="activeOption === 'customers'"
+          (click)="navigateTo('customers')"
+        >
+          <mat-icon style="vertical-align: middle">people</mat-icon>
+          <span style="vertical-align: middle"> Customers</span>
+        </li>
+        <h3>BANK CATEGORY</h3>
+        <li
+          [class.active]="activeOption === 'events'"
+          (click)="navigateTo('events')"
+        >
+          <mat-icon style="vertical-align: middle">event</mat-icon>
+          <span style="vertical-align: middle"> Events</span>
+        </li>
+        <li
+          [class.active]="activeOption === 'awards'"
+          (click)="navigateTo('awards')"
+        >
+          <mat-icon style="vertical-align: middle">emoji_events</mat-icon>
+          <span style="vertical-align: middle"> Awards</span>
+        </li>
+
+
+        <h3>ADMIN MANAGEMENT</h3>
+        <li
+          [class.active]="activeOption === 'signup'"
+          (click)="navigateTo('signup')"
+        >
+        <mat-icon style="vertical-align: middle;">admin_panel_settings</mat-icon>
+        <span style="vertical-align: middle;"> SIGN UP</span>
+        </li>
+
+
+        <li (click)="logout()">LOGOUT</li>
+      </ul>
+    </div>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

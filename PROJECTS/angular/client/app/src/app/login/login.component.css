@@ -1,0 +1,246 @@
+.login-container {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height:81vh;
+    background-color: #c9c9c9;
+  }
+  
+  .login-container form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+  }
+  
+  .login-container h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .login-container label {
+    display: block;
+    text-align: left;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .login-container input {
+    width: 90%;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  /* .login-container button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  } */
+  
+  /* .login-container button:hover {
+    background-color: #0056b3;
+  } */
+  
+  /* frontend/src/app/login/login.component.css */
+.login-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 10px;
+}
+.error {
+  color: red;
+  font-size: 13px;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+/* css for landing page */
+
+.landing-page {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2.5em;
+  color: #333;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+.img {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.images img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact label {
+  font-weight: bold;
+}
+
+.contact input,
+.contact textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .images img {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+
+
+
+/* //login button */
+.mainContainer {
+  position: relative;
+}
+
+.login-btn {
+  position: absolute;
+  top: -71px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-btn:hover{
+  background-color: #0262c8;
+  transition-duration: 100ms;
+  transform:scale(1.1) ;
+}
+
+.login-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding-right:20px;
+  padding-top: 2px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: 500px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 6px;
+  left: 90%;
+  right: 1%;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.error-message {
+  color: red;
+}
+.error {
+  color: red;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

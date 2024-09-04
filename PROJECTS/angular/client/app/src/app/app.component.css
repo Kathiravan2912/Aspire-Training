@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 13px ;
+}
+.footer{
+    text-align: center;
+    background-color: black;
+    color:white;
+    padding: 5px;
+    font-size: 20px;
+}
